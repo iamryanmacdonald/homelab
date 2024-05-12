@@ -1,4 +1,4 @@
-module git.khuedoan.com/iamryanmacdonald/homelab/gitea/config
+module git.ryanmacdonald.io/iamryanmacdonald/homelab/gitea/config
 
 go 1.19
 
