@@ -5,7 +5,7 @@
 KUBECONFIG = $(shell pwd)/metal/kubeconfig.yaml
 KUBE_CONFIG_PATH = ${KUBECONFIG}
 
-default: metal system external
+default: metal system external post-install
 
 configure:
 	./scripts/configure
@@ -19,6 +19,9 @@ metal:
 
 system:
 	make -C system
+
+post-install:
+	@./scripts/hacks
 
 tools:
 	@docker run \
