@@ -1,0 +1,17 @@
+all:
+  vars:
+    control_plane_endpoint: 192.168.0.100
+    load_balancer_ip_pool:
+      - 192.168.0.224/27
+
+metal:
+  children:
+    masters:
+      hosts:
+        metal0:
+          {
+            ansible_host: 192.168.0.110,
+            mac: "c8:5b:76:db:7b:ec",
+            disk: nvme0n1,
+            network_interface: enp4s0,
+          }
